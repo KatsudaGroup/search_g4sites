@@ -3,6 +3,9 @@ from matplotlib_venn import venn2
 import matplotlib.pyplot as plt
 import sys
 
+if len(sys.argv) > 2:
+    raise
+
 filename = sys.argv[1]
 #filename = 'search_result.tsv'
 df = pd.read_csv(filename,  header = 0, sep = '\t')
