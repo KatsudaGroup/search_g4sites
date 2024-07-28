@@ -118,9 +118,10 @@ if __name__ == '__main__':
     parser.add_argument('-n', type = int, default = 7)
     args, remain = parser.parse_known_args()
     file_list = remain
+    print("length of intervals of G-tracts: {}".format(args.n), file = sys.stderr)
 
     header_entry = [
-            "id", "description", "g2", "g3", "g1", "g2_min_interval", "g3_g1_min_interval"
+            "id", "description", "G2", "G3", "G1", "G2_min_interval", "G3_G1_min_interval"
     ]
     print("\t".join(header_entry))
 
