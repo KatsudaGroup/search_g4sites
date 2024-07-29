@@ -123,7 +123,7 @@ if __name__ == '__main__':
     header_entry = [
             "id", "description", "G2", "G3", "G1", "G2_min_interval", "G3_G1_min_interval"
     ]
-    print("\t".join(header_entry))
+    print(*header_entry, sep = '\t')
 
     filter_func = lambda entry: True if entry['id'][0:3] == 'NM_' else False
     for filename in file_list:
@@ -134,6 +134,5 @@ if __name__ == '__main__':
                 entry['id'], entry['description'], len(entry['g2']), len(entry['g3']), len(entry['g1']), entry['g2_min_interval'] ,entry['g3_g1_min_interval']
             ]
             entry_str = list(map(str, record))
-            s = "\t".join(entry_str)
-            print(s)
+            print(*entry_str, sep = '\t')
 
