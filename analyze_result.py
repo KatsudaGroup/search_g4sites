@@ -4,8 +4,8 @@ import sys
 if len(sys.argv) > 2:
     raise
 
-#filename = sys.argv[1]
-filename = 'result.tsv'
+filename = sys.argv[1]
+#filename = 'result.tsv'
 nm_df = pd.read_csv(filename,  header = 0, sep = '\t')
 
 g22_series = nm_df['G2'] >= 2
