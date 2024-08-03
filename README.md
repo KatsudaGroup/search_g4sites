@@ -22,21 +22,23 @@ Analysis is divided into two steps as follows:
 
 ### Count motifs
 
+Currently, the dataset of human mRNA are split into 14 files.
+
 ```
-$ python search_g4sites.py data/human.{1..12}.rna.fna 
+$ python search_g4sites.py data/human.{1..14}.rna.fna 
 ```
 
 if you want to change the limit length of the loop , `-n (length)` is available.
 
 ```
-$ python search_g4sites.py -n 8 data/human.{1..12}.rna.fna
+$ python search_g4sites.py -n 8 data/human.{1..14}.rna.fna
 ```
 
 The code prints the number of the motifs in each mRNA. 
 In order to summarize, the outputs must be printed in a text file by redirection or `tee` command as follows.
 
 ```
-$ python search_g4sites.py data/human.{1..12}.rna.fna | tee search_result.tsv
+$ python search_g4sites.py data/human.{1..14}.rna.fna | tee search_result.tsv
 ``` 
 
 ### Summarize
