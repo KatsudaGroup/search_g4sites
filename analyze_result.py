@@ -29,6 +29,8 @@ print("Entry of NM_, and have no motifs: {}".format(len(nm_df) - len(nm_df[g22_s
 print("Entry of NM_',and have two G2 within 200: {}".format(len(nm_df[g22_within_200_series]) ))
 print("Entry of NM_',and have two G3 G1 within 200: {}".format(len(nm_df[g31_within_200_series]) ))
 print("Entry of NM_, and G1 >= 2: {}".format(len_g2nd) )
+print("Entry of NM_, and G2 within 200 and G3-1 within 200: {}".format(len(nm_df[g22_within_200_series & g31_within_200_series])))
+print("Entry of NM_, and G2 within 200 or  G3-1 within 200: {}".format(len(nm_df[g22_within_200_series | g31_within_200_series])))
 #print(nm_df[g22_within_200_series])
 #print(nm_df[g22_within_200_series == False])
 

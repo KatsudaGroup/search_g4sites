@@ -18,4 +18,5 @@ if printf '%s\n' "${organ_list[@]}" | grep -qx "human"; then
 			gunzip ${data_dir}/${filename}.gz
 		fi
 	done;
+	wget -P ${data_dir} https://ddbj.nig.ac.jp/public/mirror_database/refseq/H_sapiens/mRNA_Prot/human.files.installed
 fi
